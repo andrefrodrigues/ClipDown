@@ -16,7 +16,11 @@
              contentType: "application/json; charset=utf-8",
              async: true,
              success: function (obj) {
-                 $("#placeHolder").text(obj.d.Item1);
+                 if (obj.d.Item1 == "OK") {
+                     $("#placeHolder").text("O CLIP está a funcionar neste momento!");
+                     $("#placeHolder").addClass("label");
+                     $("#placeHolder").addClass("label-success");
+                 }
              }
          });
 
@@ -27,18 +31,35 @@
 </head>
 <body>
 
+    <div id="aboutModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+               <h2>O que é este site?</h2> 
+                </div>
+                <div class="modal-body">
+
+                </div>
+            <div class="modal-footer">
+
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="container">
     <div class="jumbotron">
         <h2>O CLIP está em baixo?</h2>
     </div>
         <div class="container">
+        <input type="button" class="btn btn-primary" value="O que é isto?" data-toggle="modal" data-target="#aboutModal"/>
 
-            <label id="placeHolder" />
-
+            <h3><label id="placeHolder" /></h3>
     </div>
     <form id="form1" runat="server">
-        <asp:ScriptManager runat="server" EnablePageMethods="true"/>
-
-
+        <asp:ScriptManager runat="server" EnablePageMethods="true"/>    
     </form>
+        </div>
 </body>
 </html>

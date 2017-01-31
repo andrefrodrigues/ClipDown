@@ -19,7 +19,7 @@ namespace OClipTaEmBaixo
         //data
         private static DateTime lastUp = DateTime.Now;
         private static DateTime lastDown = DateTime.Now;
-        private static string ServerStatus = "";
+        private static string ServerStatus = "OK";
         private static string currentRTT="";
 
 
@@ -27,8 +27,8 @@ namespace OClipTaEmBaixo
         {
             if (!IsPostBack)
             {
-                if (!RequestWorker.IsAlive)
-                    RequestWorker.Start();
+                //if (!RequestWorker.IsAlive)
+                //    RequestWorker.Start();
             }
             while (string.IsNullOrEmpty(ServerStatus)) ;
         }
