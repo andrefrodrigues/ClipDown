@@ -24,6 +24,7 @@
         <script type="text/javascript" src="Scripts/jquery-1.10.2.min.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/Site.css" rel="stylesheet" />
     <script> $(document).ready(function () {
      setInterval(function () {
          $.ajax({
@@ -68,11 +69,13 @@
     <div class="container">
     <div class="jumbotron">
         <h2>O CLIP está em baixo?</h2>
+               
+        <br/>
+            <h3><label id="placeHolder" /></h3>
+         <input type="button" class="btn btn-primary btn-xs" value="O que é isto?" data-toggle="modal" data-target="#aboutModal"/>
     </div>
         <div class="container">
-        <input type="button" class="btn btn-primary" value="O que é isto?" data-toggle="modal" data-target="#aboutModal"/>
 
-            <h3><label id="placeHolder" /></h3>
     </div>
     <form id="form1" runat="server">
         <asp:ScriptManager runat="server" EnablePageMethods="true"/>    
