@@ -25,6 +25,7 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <script src="Scripts/bootstrap.min.js"></script>
     <link href="Content/Site.css" rel="stylesheet" />
+    <link href="Content/TrafficLight.css" rel="stylesheet" />
     <script> $(document).ready(function () {
      setInterval(function () {
          $.ajax({
@@ -76,6 +77,7 @@
     </div>
         <div class="container">
 
+            <div class="col-md-6">
             <div class="form-group">
             <label for="lastOnline">Última vez online:</label>
             <label id="lastOnline"/>
@@ -84,9 +86,21 @@
             <label for="lasOffline">Última vez offline:</label>
             <label id="lastOffline" />
                </div>
+                </div>
+            <div class="col-md-6">
+
+              <div class="trafficlight">
+                    <div class="red"></div>
+                    <div class="yellow"></div>
+                    <div class="green"></div>
+            </div>  
+
+            </div>
     </div>
     <form id="form1" runat="server">
-        <asp:ScriptManager runat="server" EnablePageMethods="true"/>    
+        <asp:ScriptManager runat="server" EnablePageMethods="true"/>
+
+       
     </form>
         </div>
 </body>
