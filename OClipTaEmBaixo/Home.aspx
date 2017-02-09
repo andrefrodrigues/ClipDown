@@ -76,6 +76,14 @@
     </div>
         <div class="container">
 
+            <div class="form-group">
+            <label for="lastOnline">Última vez online:</label>
+            <label id="lastOnline"/>
+            </div>
+            <div class="form-group">
+            <label for="lasOffline">Última vez offline:</label>
+            <label id="lastOffline" />
+               </div>
     </div>
     <form id="form1" runat="server">
         <asp:ScriptManager runat="server" EnablePageMethods="true"/>    
